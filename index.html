@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <title>Todo</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><h1>TODO:</h1></a>
+    </header>
+    <main>
+      <section>
+        <div id="reassign-container">
+          <h1>Task Assignment</h1>
+          <span id="reassign-btn" onclick=" deleteTaskDistribution()"
+            ><i class="fas fa-redo"></i
+          ></span>
+        </div>
+        <div class="line"></div>
+        <div id="drag-drop-wrapper">
+          <div id="dropzone-container">
+            <div class="dropzone-subheading">Cooking</div>
+            <div class="dropzone-subheading">Bath</div>
+            <div class="dropzone-subheading">Kitchen</div>
+            <div class="dropzone-subheading">Shopping</div>
+            <div class="dropzone-mobile-subheading">Cooking</div>
+            <div
+              class="dropzone-task"
+              id="dropzone-cooking"
+              ondrop="drop(event)"
+              ondragover="allowDrop(event)"
+            ></div>
+            <div class="dropzone-mobile-subheading">Bath</div>
+            <div
+              class="dropzone-task"
+              id="dropzone-bath"
+              ondrop="drop(event)"
+              ondragover="allowDrop(event)"
+            ></div>
+            <div class="dropzone-mobile-subheading">Kitchen</div>
+            <div
+              class="dropzone-task"
+              id="dropzone-kitchen"
+              ondrop="drop(event)"
+              ondragover="allowDrop(event)"
+            ></div>
+            <div class="dropzone-mobile-subheading">Shopping</div>
+            <div
+              class="dropzone-task"
+              id="dropzone-shopping"
+              ondrop="drop(event)"
+              ondragover="allowDrop(event)"
+            ></div>
+          </div>
+
+          <div id="name-container">
+            <div
+              class="dropzone-name"
+              id="name1"
+              draggable="true"
+              ondragstart="drag(event)"
+            >
+              Ida
+            </div>
+            <div
+              class="dropzone-name"
+              id="name2"
+              draggable="true"
+              ondragstart="drag(event)"
+            >
+              Fritz
+            </div>
+            <div
+              class="dropzone-name"
+              id="name3"
+              draggable="true"
+              ondragstart="drag(event)"
+            >
+              Jan
+            </div>
+            <div
+              class="dropzone-name"
+              id="name4"
+              draggable="true"
+              ondragstart="drag(event)"
+            >
+              Lotte
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="lists-overview">
+        <h1>Todo Lists</h1>
+        <div class="line"></div>
+        <div class="list-container">
+          <h2>Cooking List</h2>
+          <a href="cooking.html"><i class="fas fa-long-arrow-alt-right"></i></a>
+          <div class="progressbar"><div class="halfdone"></div></div>
+        </div>
+        <div class="list-container">
+          <h2>Bath List</h2>
+          <a href="bath.html"><i class="fas fa-long-arrow-alt-right"></i></a>
+          <div class="progressbar"><div class="started"></div></div>
+        </div>
+        <div class="list-container">
+          <h2>Kitchen List</h2>
+          <a href="kitchen.html"><i class="fas fa-long-arrow-alt-right"></i></a>
+          <div class="progressbar"><div class="done"></div></div>
+        </div>
+        <div class="list-container">
+          <h2>Shopping List</h2>
+          <a href="shopping.html"
+            ><i class="fas fa-long-arrow-alt-right"></i
+          ></a>
+          <div class="progressbar"><div class="halfdone"></div></div>
+        </div>
+      </section>
+      <section>
+        <h1>Notes</h1>
+        <div class="line"></div>
+        <div id="notes-container"></div>
+        <div id="note-making-container">
+          <textarea
+            id="note-txt"
+            placeholder="write a note"
+            rows="6"
+            cols="50"
+          ></textarea>
+          <button id="share-btn" class="button" onclick="makeNote()">
+            Share
+          </button>
+        </div>
+        <template>
+          <div
+            style="border: 2px solid var(--main-color); padding: 20px 20px 20px 10px; margin-bottom: 20px;"
+          >
+            <p style="display:inline"></p>
+            <i
+              id="closeBtn"
+              class="fas fa-times"
+              style="font-size:20px; color:var(--main-color); float:right; display:inline;"
+            ></i>
+          </div>
+        </template>
+      </section>
+      <div id="color-changer">Color<input type="color" /></div>
+    </main>
+    <script src="js/app.js"></script>
+    <script src="js/color-changer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js"></script>
+  </body>
+</html>

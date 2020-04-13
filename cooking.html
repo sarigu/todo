@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <title>Todo</title>
+  </head>
+  <body>
+      <header>
+          <a href="index.html"><h1>TODO:</h1></a>
+        </header>
+    <main>
+   
+      <section>   
+          <h1>TODO: Cooking</h1>
+          <h2>This task is <span id="name-placeholder"></span> 's task.</h2>
+          <div class="line"></div>  
+          <h1 id="lunchplan-heading">Lunchplan</h1>  
+        <table id="week-schedule">
+        <tr>
+          <th>Day</th>
+          <th>Dinner</th>
+        </tr>
+        <tr>
+          <td>Monday</td>
+          <td id="dinner-monday"></td>
+        </tr>
+        <tr>
+          <td>Tuesday</td>
+          <td id="dinner-tuesday"></td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td id="dinner-wednesday"></td>
+        </tr>
+        <tr>
+          <td>Thursday</td>
+          <td id="dinner-thursday"></td>
+        </tr>
+        <tr>
+          <td>Friday</td>
+          <td id="dinner-friday"></td>
+        </tr>
+        <tr>
+          <td>Saturday</td>
+          <td id="dinner-saturday"></td>
+        </tr>
+        <tr>
+          <td>Sunday</td>
+          <td id="dinner-sunday"></td>
+        </tr>
+      </table>
+      <form id="cooking-form">
+          <select id="weekday"  name="weekday">
+            <option value="monday">Monday</option>
+            <option value="tuesday">Tuesday</option>
+            <option value="wednesday">Wednesday</option>
+            <option value="thursday">Thursday</option>
+            <option value="friday">Friday</option>
+            <option value="saturday">Saturday</option>
+            <option value="sunday">Sunday</option>
+
+            <input type="text" placeholder ="Dinner" name="dinner" id="dinner">
+            <input type="submit" value="Add">
+          </form>
+      </section>
+      <div id="color-changer">Color<input type="color" /></div>
+    </main>
+    <script src="js/cooking.js"></script>
+    <script src="js/color-changer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js"></script>
+  </body>
+</html>
