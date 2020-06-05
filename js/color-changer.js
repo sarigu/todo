@@ -19,7 +19,7 @@ function init() {
       root.style.setProperty("--hover-color", "#666666");
     }
   } else {
-    bodyTag.style.backgroundColor = "#f5e8d1";
+    bodyTag.style.backgroundColor = "#ebebf7";
   }
 }
 
